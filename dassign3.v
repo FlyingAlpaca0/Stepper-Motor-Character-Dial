@@ -6,8 +6,6 @@
 // 
 // Motor Controller 
 // Produces the proper motor_drv pulse sequence
-// Sample code from Design Assignment #2 for your reference. 
-// You can choose to modify this to your design if you so choose.
 // 
 module motor_ctrl (motor_drv, done, forw, rev, reset, drv_clk);
    output [3:0] motor_drv;
@@ -106,8 +104,6 @@ endmodule
 // 
 // ASCII to Letter Dial Position 
 // Converts the 7-bit ASCII to the proper position location from 0-31. 
-// Sample code from Design Assignment #1 for your reference. 
-// You can choose to modify this to your design if you so choose.
 // 
 module ascii2pos(pos, ascii);
    output [4:0] pos;
@@ -184,9 +180,7 @@ module ascii2pos(pos, ascii);
    end // always @ (ascii)
 endmodule 
 
-//
-// vvv--- Add any modules you need below---vvv
-//
+
 module motor_steps (mtr_steps, mtr_pos, rev);
   output [2:0] mtr_steps;
   input [4:0] mtr_pos;
@@ -262,7 +256,7 @@ module dassign3(motor, led, btnC, sw, clk, btnU);
   wire [2:0] steps;
   motor_steps mtrstep(steps, curr_pos, motor_rev);
    //
-   // Declare your variables
+   // Declare variables
    //
    parameter SST0 = 2'b00;
    parameter SST1 = 2'b01;
